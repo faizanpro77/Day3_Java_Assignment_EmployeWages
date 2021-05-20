@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public class EmployeeWage {
-    private static final int IS_PRESENT = 1;
+    private static final int IS_Full_TIME = 1;
     private static final int  WAGE_PER_HR = 20;
     private static final int IS_PART_TIME = 2;
 
@@ -9,10 +9,10 @@ public class EmployeeWage {
 
         int empHR = 0;
 
-        double empCheck = Math.floor(Math.random() * 10) % 3;
+        double empCheck = (Math.floor(Math.random() * 10)) % 3;
         System.out.println(empCheck);
         //full time
-        if(empCheck == IS_PRESENT) {
+        if(empCheck == IS_Full_TIME) {
             empHR = 8;
         }
         //part time
