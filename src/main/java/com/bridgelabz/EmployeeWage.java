@@ -10,7 +10,7 @@ public class EmployeeWage {
         int empHR = 0;
 
         double empCheck = Math.floor(Math.random() * 10) % 3;
-        System.out.println(empCheck);
+
         //full time
         if(empCheck == IS_PRESENT) {
             empHR = 8;
