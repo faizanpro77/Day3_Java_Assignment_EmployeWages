@@ -11,7 +11,7 @@ public class EmployeeWage {
         int empWage=0;
         for (int day = 1 ; day <= 20 ; day ++) {
 
-            int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+            int empCheck = (int) (Math.floor(Math.random() * 10)) % 3;
             switch (empCheck) {
                 case IS_Full_TIME:
                     empHR = 8;
