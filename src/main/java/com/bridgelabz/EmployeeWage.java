@@ -1,10 +1,24 @@
 package com.bridgelabz;
 
 public class EmployeeWage {
-    private static String company;
 
-    public static void employeeWageForCompany(String company, int wagePerHour, int maxHr, int maxDay) {
-       // EmployeeWage.company = company;
+    private static final int IS_Full_TIME = 1;
+    private static final int IS_PART_TIME = 2;
+
+    private final String company;
+    private final int wagePerHour;
+    private final int maxHr;
+    private final int maxDay;
+
+    public EmployeeWage(String company, int wagePerHour, int maxHr, int maxDay) {
+        this.company = company;
+        this.wagePerHour = wagePerHour;
+        this.maxHr = maxHr;
+        this.maxDay = maxDay;
+    }
+
+
+    public  int employeeWageForCompany() {
         int empHR = 0;
         int empWage=0;
         int totalWorkingHr = 0;
@@ -14,10 +28,10 @@ public class EmployeeWage {
             int empCheck = (int) (Math.floor(Math.random() * 10)) % 3;
 
             switch (empCheck) {
-                case 1:
+                case IS_Full_TIME:
                     empHR = 8;
                     break;
-                case 2:
+                case IS_PART_TIME:
                     empHR = 4;
                     break;
                 default:
@@ -28,11 +42,14 @@ public class EmployeeWage {
             day++;
             totalWorkingHr = totalWorkingHr + empHR;
         }
-        System.out.println("Employee monthly wage for company " + company + " : " + empWage);
-        System.out.println("Employee total working hours: " + totalWorkingHr);
+        System.out.println("Employee " + company + " total working hours: " + totalWorkingHr);
+        return empWage;
     }
     public static void main(String[] args){
-        employeeWageForCompany("Dmart",20,30,20);
+        EmployeeWage dmart = new EmployeeWage("Dmart",20,30,20);
+        System.out.println("Employee monthly wage for Dmart : " + dmart.employeeWageForCompany());
+        EmployeeWage Reliance = new EmployeeWage("Reliance",35,40,30);
+        System.out.println("Employee monthly wage for Reliance : " + Reliance.employeeWageForCompany());
     }
 }
 
