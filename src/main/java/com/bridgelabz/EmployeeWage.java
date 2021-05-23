@@ -1,10 +1,11 @@
 package com.bridgelabz;
 
 public class EmployeeWage {
-    private static String company;
+
+    private static final int IS_Full_TIME = 1;
+    private static final int IS_PART_TIME = 2;
 
     public static void employeeWageForCompany(String company, int wagePerHour, int maxHr, int maxDay) {
-       // EmployeeWage.company = company;
         int empHR = 0;
         int empWage=0;
         int totalWorkingHr = 0;
@@ -14,10 +15,10 @@ public class EmployeeWage {
             int empCheck = (int) (Math.floor(Math.random() * 10)) % 3;
 
             switch (empCheck) {
-                case 1:
+                case IS_Full_TIME:
                     empHR = 8;
                     break;
-                case 2:
+                case IS_PART_TIME:
                     empHR = 4;
                     break;
                 default:
