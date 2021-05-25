@@ -5,20 +5,7 @@ public class EmployeeWage {
     private static final int IS_Full_TIME = 1;
     private static final int IS_PART_TIME = 2;
 
-    private final String company;
-    private final int wagePerHour;
-    private final int maxHr;
-    private final int maxDay;
-
-    public EmployeeWage(String company, int wagePerHour, int maxHr, int maxDay) {
-        this.company = company;
-        this.wagePerHour = wagePerHour;
-        this.maxHr = maxHr;
-        this.maxDay = maxDay;
-    }
-
-
-    public  int employeeWageForCompany() {
+    public static void employeeWageForCompany(String company, int wagePerHour, int maxHr, int maxDay) {
         int empHR = 0;
         int empWage=0;
         int totalWorkingHr = 0;
@@ -42,14 +29,12 @@ public class EmployeeWage {
             day++;
             totalWorkingHr = totalWorkingHr + empHR;
         }
-        System.out.println("Employee " + company + " total working hours: " + totalWorkingHr);
-        return empWage;
+        System.out.println("Employee monthly wage for company " + company + " : " + empWage);
+        System.out.println("Employee total working hours: " + totalWorkingHr);
     }
     public static void main(String[] args){
-        EmployeeWage dmart = new EmployeeWage("Dmart",20,30,20);
-        System.out.println("Employee monthly wage for Dmart : " + dmart.employeeWageForCompany());
-        EmployeeWage Reliance = new EmployeeWage("Reliance",35,40,30);
-        System.out.println("Employee monthly wage for Reliance : " + Reliance.employeeWageForCompany());
+        employeeWageForCompany("Dmart",20,30,20);
+        employeeWageForCompany("Reliance",35,40,30);
     }
 }
 
