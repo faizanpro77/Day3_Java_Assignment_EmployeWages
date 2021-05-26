@@ -10,4 +10,15 @@ public class CompanyEmpWage {
             this.maxHr = maxHr;
             this.maxDay = maxDay;
         }
+
+    @Override
+    public String toString() {
+        return "CompanyEmpWage{" +
+                "wagePrHr=" + wagePrHr +
+                ", maxHr=" + maxHr +
+                ", maxDay=" + maxDay +
+                ", empMonthlyWages=" + empMonthlyWages +
+                ", companyName='" + companyName + '\'' +
+                '}';
     }
+}

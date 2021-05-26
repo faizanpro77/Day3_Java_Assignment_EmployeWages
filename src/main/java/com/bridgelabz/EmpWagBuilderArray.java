@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+
 public class EmpWagBuilderArray implements EmpWageInterface {
 
     private static final int IS_FULL_TIME = 1;
@@ -34,15 +36,18 @@ public class EmpWagBuilderArray implements EmpWageInterface {
 
     public static void main(String[] args) {
         System.out.println( " Welcome to Employee Wage Computation Program " );
-       EmpWagBuilderArray empWageBuilder = new EmpWagBuilderArray();
-        // Array
-        CompanyEmpWage[] company = new CompanyEmpWage[3];
-        // Object creation
-        company[0] = new CompanyEmpWage("DMart",15,50,25);
-        empWageBuilder.calculateEmpWage(company[0]);
-        company[1] = new CompanyEmpWage("Big Basket",26,65,33);
-        empWageBuilder.calculateEmpWage(company[1]);
-        company[2] = new CompanyEmpWage("Reliance",25,45,30);
-        empWageBuilder.calculateEmpWage(company[2]);
+      EmpWagBuilderArray empWageBuilder = new EmpWagBuilderArray();
+        CompanyEmpWage wage1 = new CompanyEmpWage("MartD",15,50,25);
+        CompanyEmpWage wage2 = new CompanyEmpWage("Big Basket",26,65,33);
+        CompanyEmpWage wage3 = new CompanyEmpWage("Reliance",25,45,30);
+
+        ArrayList<CompanyEmpWage> list = new ArrayList<>();
+        list.add(wage1);
+        list.add(wage2);
+        list.add(wage3);
+        empWageBuilder.calculateEmpWage(wage1);
+        empWageBuilder.calculateEmpWage(wage2);
+        empWageBuilder.calculateEmpWage(wage3);
+        System.out.println(list);
     }
 }
