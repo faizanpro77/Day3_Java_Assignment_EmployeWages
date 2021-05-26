@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class EmpWagBuilderArray {
+public class EmpWagBuilderArray implements EmpWageInterface {
 
     private static final int IS_FULL_TIME = 1;
     private static final int IS_PART_TIME = 2;

@@ -1,4 +1,6 @@
 com/bridgelabz/CompanyEmpWage.java
  com.bridgelabz.CompanyEmpWage
+com/bridgelabz/EmpWageInterface.java
+ com.bridgelabz.EmpWageInterface
 com/bridgelabz/EmpWagBuilderArray.java
  com.bridgelabz.EmpWagBuilderArray
