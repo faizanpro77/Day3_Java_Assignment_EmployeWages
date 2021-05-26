@@ -7,7 +7,7 @@ public class EmpWagBuilderArray implements EmpWageInterface {
     private static final int IS_FULL_TIME = 1;
     private static final int IS_PART_TIME = 2;
 
-    //EMPLOYEE WAGE COMPUTATION
+    //Calculate total wage
     public void calculateEmpWage(CompanyEmpWage companyEmpWage) {
         //VARIABLES
         int empHours;
@@ -36,7 +36,7 @@ public class EmpWagBuilderArray implements EmpWageInterface {
 
     public static void main(String[] args) {
         System.out.println( " Welcome to Employee Wage Computation Program " );
-      EmpWagBuilderArray empWageBuilder = new EmpWagBuilderArray();
+        EmpWagBuilderArray empWageBuilder = new EmpWagBuilderArray();
         CompanyEmpWage wage1 = new CompanyEmpWage("MartD",15,50,25);
         CompanyEmpWage wage2 = new CompanyEmpWage("Big Basket",26,65,33);
         CompanyEmpWage wage3 = new CompanyEmpWage("Reliance",25,45,30);
