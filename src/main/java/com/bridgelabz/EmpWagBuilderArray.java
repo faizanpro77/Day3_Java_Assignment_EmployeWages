@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EmpWagBuilderArray implements EmpWageInterface {
 
@@ -30,6 +31,8 @@ public class EmpWagBuilderArray implements EmpWageInterface {
             workingHours += empHours;
             dailyEmpWage = empHours * companyEmpWage.wagePrHr;
             companyEmpWage.empMonthlyWages += dailyEmpWage;
+            System.out.println("Employee day: " + workingDays + " Employee hours: " + empHours);
+            System.out.println("Daily Wage of " + companyEmpWage.companyName + " Employee is: " + dailyEmpWage + "\n");
         }
         System.out.println( "Total Wage Of " + companyEmpWage.companyName + " Employee is: " + companyEmpWage.empMonthlyWages );
     }
@@ -40,7 +43,6 @@ public class EmpWagBuilderArray implements EmpWageInterface {
         CompanyEmpWage wage1 = new CompanyEmpWage("MartD",15,50,25);
         CompanyEmpWage wage2 = new CompanyEmpWage("Big Basket",26,65,33);
         CompanyEmpWage wage3 = new CompanyEmpWage("Reliance",25,45,30);
-
         ArrayList<CompanyEmpWage> list = new ArrayList<>();
         list.add(wage1);
         list.add(wage2);
@@ -48,6 +50,5 @@ public class EmpWagBuilderArray implements EmpWageInterface {
         empWageBuilder.calculateEmpWage(wage1);
         empWageBuilder.calculateEmpWage(wage2);
         empWageBuilder.calculateEmpWage(wage3);
-        System.out.println(list);
     }
 }
