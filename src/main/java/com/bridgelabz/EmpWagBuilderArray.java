@@ -36,8 +36,8 @@ public class EmpWagBuilderArray implements EmpWageInterface {
         }
         System.out.println( "Total Wage Of " + companyEmpWage.companyName + " Employee is: " + companyEmpWage.empMonthlyWages );
     }
-    public static void queryOfCompany(){
 
+    public static void queryOfCompany(){
         EmpWagBuilderArray empWageBuilder = new EmpWagBuilderArray();
         Scanner scanner = new Scanner(System.in);
         //Arraylist
@@ -71,6 +71,7 @@ public class EmpWagBuilderArray implements EmpWageInterface {
                 break;
         }
     }
+
     public static void main(String[] args) {
         System.out.println( " Welcome to Employee Wage Computation Program " );
         queryOfCompany();
